@@ -22,7 +22,7 @@
       <td><img [src]="course.imageUrl" width="50" /></td>
       <td>{{ course.name }}</td>
       <td>{{ course.price | currency: 'BRL' }}</td>
-      <td>{{ course.code }}</td>
+      <td>{{ course.code | replace:'-':'\\' }}</td>
       <td>
         <app-star [rating]="course.rating"></app-star>
       </td>

@@ -1,3 +1,4 @@
+import { AppPipeModule } from './../shared/pipe/app-pipe.module';
 import { StarModule } from './../shared/component/star/star.module';
 import { RouterModule } from "@angular/router";
 import { CourseInfoComponent } from "./course-info.component";
@@ -12,6 +13,7 @@ import { CommonModule } from "@angular/common";
     CommonModule,
     FormsModule,
     StarModule,
+    AppPipeModule,
     RouterModule.forChild([
       { path: "courses", component: CourseListComponent },
       { path: "courses/info/:id", component: CourseInfoComponent },
