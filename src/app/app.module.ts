@@ -1,5 +1,5 @@
 import { CoreModule } from "./core/core.module";
-import { NotFoundComponent } from "./not-found/not-found.component";
+import { NotFoundComponent } from "./core/component/not-found/not-found.component";
 import { NavBarComponent } from "./core/component/nav-bar/nav-bar.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -9,7 +9,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { CourseModule } from "./courses/ course.module";
 
 @NgModule({
-  declarations: [AppComponent, NotFoundComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -17,7 +17,6 @@ import { CourseModule } from "./courses/ course.module";
     CoreModule,
     RouterModule.forRoot([
       { path: "", redirectTo: "courses", pathMatch: "full" },
-      { path: "**", component: NotFoundComponent },
     ]),
   ],
   providers: [],

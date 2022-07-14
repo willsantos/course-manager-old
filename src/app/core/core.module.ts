@@ -1,16 +1,13 @@
-import { RouterModule } from '@angular/router';
+import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { NavBarComponent } from "./component/nav-bar/nav-bar.component";
+import { NotFoundComponent } from "./component/not-found/not-found.component";
 
 @NgModule({
-  declarations:[
-    NavBarComponent
+  declarations: [NavBarComponent, NotFoundComponent],
+  imports: [
+    RouterModule.forChild([{ path: "**", component: NotFoundComponent }]),
   ],
-  imports:[
-    RouterModule
-  ],
-  exports:[
-    NavBarComponent
-  ]
+  exports: [NavBarComponent],
 })
-export class CoreModule{}
+export class CoreModule {}
